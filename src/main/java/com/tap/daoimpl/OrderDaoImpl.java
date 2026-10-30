@@ -46,7 +46,7 @@ public class OrderDaoImpl implements OrderDao {
 	@Override
 	public int addOrder(Order order) {
 
-		String INSERT_ORDER = "INSERT INTO `Order` "
+		String INSERT_ORDER = "INSERT INTO `order` "
 				+ "(userId, restaurantId, orderDate, totalAmount, status, paymentMode, "
 				+ "deliveryName, deliveryPhone, deliveryAddress, landmark) " + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
