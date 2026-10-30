@@ -15,24 +15,24 @@ import com.tap.util.DBConnection;
 public class OrderItemDaoImpl implements OrderItemDao {
 
     private static final String INSERT_ORDER_ITEM =
-            "INSERT INTO orderItem (orderId, menuId, quantity, itemTotal) "
+            "INSERT INTO orderitem (orderId, menuId, quantity, itemTotal) "
             + "VALUES (?, ?, ?, ?)";
 
     private static final String GET_ORDER_ITEM =
-            "SELECT * FROM orderItem WHERE orderItemId = ?";
+            "SELECT * FROM orderitem WHERE orderItemId = ?";
 
     private static final String UPDATE_ORDER_ITEM =
-            "UPDATE orderItem SET orderId = ?, menuId = ?, "
+            "UPDATE orderitem SET orderId = ?, menuId = ?, "
             + "quantity = ?, itemTotal = ? WHERE orderItemId = ?";
 
     private static final String DELETE_ORDER_ITEM =
-            "DELETE FROM orderItem WHERE orderItemId = ?";
+            "DELETE FROM orderitem WHERE orderItemId = ?";
 
     private static final String GET_ALL_ORDER_ITEMS =
-            "SELECT * FROM orderItem";
+            "SELECT * FROM orderitem";
 
     private static final String GET_ORDER_ITEMS_BY_ORDER_ID =
-            "SELECT * FROM orderItem WHERE orderId = ?";
+            "SELECT * FROM orderitem WHERE orderId = ?";
 
     @Override
     public void addOrderItem(OrderItem orderItem) {
