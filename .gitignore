@@ -1,0 +1,9 @@
+# Compiled Java files
+build/
+bin/
+target/
+*.class
+
+# Temporary files
+.DS_Store
+Thumbs.db
