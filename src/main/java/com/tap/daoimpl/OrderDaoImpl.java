@@ -15,31 +15,31 @@ import com.tap.util.DBConnection;
 public class OrderDaoImpl implements OrderDao {
 
     private static final String INSERT_ORDER =
-        "INSERT INTO `Order` " +
+        "INSERT INTO `order` " +
         "(userId, restaurantId, orderDate, totalAmount, status, paymentMode, " +
         "deliveryName, deliveryPhone, deliveryAddress, landmark) " +
         "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     private static final String GET_ORDER =
-        "SELECT * FROM `Order` WHERE orderId = ?";
+        "SELECT * FROM `order` WHERE orderId = ?";
 
     private static final String UPDATE_ORDER =
-        "UPDATE `Order` SET userId = ?, restaurantId = ?, orderDate = ?, " +
+        "UPDATE `order` SET userId = ?, restaurantId = ?, orderDate = ?, " +
         "totalAmount = ?, status = ?, paymentMode = ?, deliveryName = ?, " +
         "deliveryPhone = ?, deliveryAddress = ?, landmark = ? " +
         "WHERE orderId = ?";
 
     private static final String DELETE_ORDER =
-        "DELETE FROM `Order` WHERE orderId = ?";
+        "DELETE FROM `order` WHERE orderId = ?";
 
     private static final String GET_ALL_ORDERS =
-        "SELECT * FROM `Order`";
+        "SELECT * FROM `order`";
 
     private static final String GET_ORDERS_BY_USER =
-        "SELECT * FROM `Order` WHERE userId = ?";
+        "SELECT * FROM `order` WHERE userId = ?";
 
     private static final String GET_ORDERS_BY_RESTAURANT =
-        "SELECT * FROM `Order` WHERE restaurantId = ?";
+        "SELECT * FROM `order` WHERE restaurantId = ?";
 
 
 

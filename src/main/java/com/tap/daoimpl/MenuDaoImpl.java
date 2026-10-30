@@ -15,27 +15,27 @@ import com.tap.util.DBConnection;
 public class MenuDaoImpl implements MenuDao {
 
     private static final String INSERT_MENU =
-            "INSERT INTO Menu "
+            "INSERT INTO menu "
             + "(restaurantId, item_name, description, price, "
             + "is_available, imagePath) "
             + "VALUES (?, ?, ?, ?, ?, ?)";
 
     private static final String GET_MENU =
-            "SELECT * FROM Menu WHERE menuId = ?";
+            "SELECT * FROM menu WHERE menuId = ?";
 
     private static final String UPDATE_MENU =
-            "UPDATE Menu SET restaurantId = ?, item_name = ?, "
+            "UPDATE menu SET restaurantId = ?, item_name = ?, "
             + "description = ?, price = ?, is_available = ?, "
             + "imagePath = ? WHERE menuId = ?";
 
     private static final String DELETE_MENU =
-            "DELETE FROM Menu WHERE menuId = ?";
+            "DELETE FROM menu WHERE menuId = ?";
 
     private static final String GET_ALL_MENUS =
-            "SELECT * FROM Menu";
+            "SELECT * FROM menu";
 
     private static final String GET_MENUS_BY_RESTAURANT_ID =
-            "SELECT * FROM Menu WHERE restaurantId = ?";
+            "SELECT * FROM menu WHERE restaurantId = ?";
 
     @Override
     public void addMenu(Menu menu) {

@@ -15,24 +15,24 @@ import com.tap.util.DBConnection;
 public class UserDaoImpl implements UserDao {
 
     private static final String INSERT_USER =
-            "INSERT INTO User (username, password, email, phone, address, role) "
+            "INSERT INTO user (username, password, email, phone, address, role) "
             + "VALUES (?, ?, ?, ?, ?, ?)";
 
     private static final String GET_USER =
-            "SELECT * FROM User WHERE userId = ?";
+            "SELECT * FROM user WHERE userId = ?";
     
     private static final String GET_USER_BY_EMAIL =
-            "SELECT * FROM User WHERE email = ?";
+            "SELECT * FROM user WHERE email = ?";
 
     private static final String UPDATE_USER =
-            "UPDATE User SET username = ?, password = ?, email = ?, "
+            "UPDATE user SET username = ?, password = ?, email = ?, "
             + "phone = ?, address = ?, role = ? WHERE userId = ?";
 
     private static final String DELETE_USER =
-            "DELETE FROM User WHERE userId = ?";
+            "DELETE FROM user WHERE userId = ?";
 
     private static final String GET_ALL_USERS =
-            "SELECT * FROM User";
+            "SELECT * FROM user";
 
     @Override
     public void addUser(User user) {

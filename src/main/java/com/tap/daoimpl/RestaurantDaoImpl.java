@@ -15,25 +15,25 @@ import com.tap.util.DBConnection;
 public class RestaurantDaoImpl implements RestaurantDao {
 
     private static final String INSERT_RESTAURANT =
-            "INSERT INTO Restaurant "
+            "INSERT INTO restaurant "
             + "(name, cuisineType, deliveryTime, address, adminUserId, "
             + "rating, isActive, imagePath) "
             + "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
     private static final String GET_RESTAURANT =
-            "SELECT * FROM Restaurant WHERE restaurantId = ?";
+            "SELECT * FROM restaurant WHERE restaurantId = ?";
 
     private static final String UPDATE_RESTAURANT =
-            "UPDATE Restaurant SET name = ?, cuisineType = ?, "
+            "UPDATE restaurant SET name = ?, cuisineType = ?, "
             + "deliveryTime = ?, address = ?, adminUserId = ?, "
             + "rating = ?, isActive = ?, imagePath = ? "
             + "WHERE restaurantId = ?";
 
     private static final String DELETE_RESTAURANT =
-            "DELETE FROM Restaurant WHERE restaurantId = ?";
+            "DELETE FROM restaurant WHERE restaurantId = ?";
 
     private static final String GET_ALL_RESTAURANTS =
-            "SELECT * FROM Restaurant";
+            "SELECT * FROM restaurant";
 
     @Override
     public void addRestaurant(Restaurant restaurant) {
